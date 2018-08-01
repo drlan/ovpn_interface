@@ -5,8 +5,11 @@
     <title>Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/media.css">
     <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/hamburger.js"></script>
 </head>
 <body>
     <div class="header">
@@ -15,18 +18,24 @@
     </div>
 
     <div class="container">
-        <nav class="menu">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="#1">show users status</a></li>
-                <li><a href="#2">create user</a></li>
-                <li><a href="#3">remove user</a></li>
-                <li><a href="#4">enable user</a></li>
-                <li><a href="#5">disable user</a></li>
-                <li><a href="#6">show all users</a></li>
-                <li><a href="#7">show active users</a></li>
-            </ul>
-        </nav>
+        <div class="menu">
+            <div class="menu_icon">
+                <a href="#" id="pull"><img src="images/menu_icon.png"></a>
+            </div>
+            <nav class="menu_link">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#1">show users status</a></li>
+                    <li><a href="#2">create user</a></li>
+                    <li><a href="#3">remove user</a></li>
+                    <li><a href="#4">enable user</a></li>
+                    <li><a href="#5">disable user</a></li>
+                    <li><a href="#6">show all users</a></li>
+                    <li><a href="#7">show active users</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <div class="content"></div>
     </div>
 

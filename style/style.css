@@ -22,7 +22,7 @@
     font-family: 'El Messiri', sans-serif;
 }
 
-.menu {
+.menu_link {
     width: 25%;
     min-width: 200px;
     height: 100%;
@@ -33,7 +33,7 @@
     border-right: darkblue solid 1px;
 }
 
-.menu ul{
+.menu_link ul{
     display: block;
     margin: 0;
     padding: 0;
@@ -41,29 +41,35 @@
     position: relative;
 }
 
-.menu ul li{
+.menu_link ul li{
     display: block;
     position: relative;
-    width: 200px;
+    width: 100%;
     border-bottom: darkblue solid 1px;
     padding-top: 2%;
 }
 
-.menu h3 {
+.menu_link h3 {
     text-align: left;
     font-size: 24px;
     font-weight: normal;
     color: #424949;
 }
 
-.menu a {
+.menu_link a {
     text-decoration: none;
     color:  #616a6b;
     display: inline-block;
     font-size: 18px;
 }
 
-.menu li:before {
+.menu a:hover {
+    background-color: #ffffff;
+    color: darkblue;
+    padding: 14px 10px;
+}
+
+.menu_link li:before {
     font-family: FontAwesome, serif;
     font-size: 20px;
     vertical-align:bottom;
@@ -71,10 +77,15 @@
     margin-right: 14px;
 }
 
-.menu li:nth-child(1):before {content:"\f108";}
-.menu li:nth-child(2):before {content:"\f067";}
-.menu li:nth-child(3):before {content:"\f068";}
-.menu li:nth-child(4):before {content:"\f058";}
-.menu li:nth-child(5):before {content:"\f057";}
-.menu li:nth-child(6):before {content:"\f007";}
-.menu li:nth-child(7):before {content:"\f164";}
+.menu_link li:nth-child(1):before {content:"\f108";}
+.menu_link li:nth-child(2):before {content:"\f067";}
+.menu_link li:nth-child(3):before {content:"\f068";}
+.menu_link li:nth-child(4):before {content:"\f058";}
+.menu_link li:nth-child(5):before {content:"\f057";}
+.menu_link li:nth-child(6):before {content:"\f007";}
+.menu_link li:nth-child(7):before {content:"\f164";}
+
+.menu_icon {
+    display: none;
+}
+
