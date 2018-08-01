@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: darkblue;
+    color: #ffffff;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: darkblue;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.menu {
+    width: 25%;
+    min-width: 200px;
+    height: 100%;
+    position: fixed;
+    padding-top: 1%;
+    padding-left: 2%;
+    font-family: 'El Messiri', sans-serif;
+    border-right: darkblue solid 1px;
+}
+
+.menu ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li{
+    display: block;
+    position: relative;
+    width: 200px;
+    border-bottom: darkblue solid 1px;
+    padding-top: 2%;
+}
+
+.menu h3 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: normal;
+    color: #424949;
+}
+
+.menu a {
+    text-decoration: none;
+    color:  #616a6b;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.menu li:before {
+    font-family: FontAwesome, serif;
+    font-size: 20px;
+    vertical-align:bottom;
+    color: #2146dd;
+    margin-right: 14px;
+}
+
+.menu li:nth-child(1):before {content:"\f108";}
+.menu li:nth-child(2):before {content:"\f067";}
+.menu li:nth-child(3):before {content:"\f068";}
+.menu li:nth-child(4):before {content:"\f058";}
+.menu li:nth-child(5):before {content:"\f057";}
+.menu li:nth-child(6):before {content:"\f007";}
+.menu li:nth-child(7):before {content:"\f164";}
