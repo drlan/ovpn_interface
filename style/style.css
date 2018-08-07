@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    font-family: 'El Messiri', sans-serif;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -10,6 +17,188 @@
     background: darkblue;
     color: #ffffff;
     font-family: 'El Messiri', sans-serif;
+}
+
+#verticalTab {
+    position: relative;
+    overflow: hidden;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+ul.resp-tabs-list {
+    margin: 0;
+    padding: 0;
+}
+
+.resp-tabs-list li {
+    font-weight: 400;
+    display: inline-block;
+    padding: 13px 15px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    background: whitesmoke;
+    color: darkblue;
+    border-bottom: 1px solid darkblue;
+    font-size: 17px;
+}
+
+.resp-tabs-list li:before {
+    font-family: FontAwesome, serif;
+    font-size: 24px;
+    vertical-align:bottom;
+    color: #2146dd;
+    margin-right: 14px;
+    float: left;
+}
+
+.resp-tabs-list li:nth-child(1):before {content:"\f108";}
+.resp-tabs-list li:nth-child(2):before {content:"\f067";}
+.resp-tabs-list li:nth-child(3):before {content:"\f068";}
+.resp-tabs-list li:nth-child(4):before {content:"\f057";}
+.resp-tabs-list li:nth-child(5):before {content:"\f007";}
+.resp-tabs-list li:nth-child(6):before {content:"\f0ac";}
+
+.resp-tabs-container {
+    padding: 0;
+    background-color: #fff;
+    clear: left;
+}
+
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+    padding: 15px;
+}
+
+.resp-tab-active {
+    border: 1px solid #c1c1c1;
+    border-bottom: none;
+    margin-bottom: -1px !important;
+    padding: 12px 14px 14px 14px !important;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.resp-content-active, .resp-accordion-active {
+    display: block;
+}
+
+.resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+
+h2.resp-accordion {
+    font-size: 17px;
+    border: 1px solid #c1c1c1;
+    border-top: 0 solid #c1c1c1;
+    margin: 0;
+    padding: 10px 15px;
+    color: darkblue;
+}
+
+h2.resp-tab-active {
+    border-bottom: 0 solid #c1c1c1 !important;
+    margin-bottom: 0 !important;
+    padding: 10px 15px !important;
+}
+
+h2.resp-tab-title:last-child {
+    border-bottom: 12px solid #c1c1c1 !important;
+    background: blue;
+}
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+    float: left;
+    width: 20%;
+}
+
+.resp-vtabs .resp-tabs-list li {
+    display: block;
+    padding: 15px 15px !important;
+    margin: 0;
+    cursor: pointer;
+    float: none;
+}
+
+.resp-vtabs .resp-tabs-container {
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #c1c1c1;
+    float: left;
+    width: 75%;
+    min-height: 250px;
+    border-radius: 4px;
+    clear: none;
+}
+
+.resp-vtabs .resp-tab-content {
+    border: none;
+}
+
+.resp-vtabs li.resp-tab-active {
+    border: 1px solid #c1c1c1;
+    border-right: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-right: -1px !important;
+    padding: 14px 15px 15px 14px !important;
+}
+
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 3px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #c1c1c1;
+}
+
+h2.resp-tab-active span.resp-arrow {
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #9B9797;
+}
+
+/*-----------Accordion styles-----------*/
+h2.resp-tab-active {
+    background: #DBDBDB !important;
+}
+.resp-easy-accordion  h2.resp-accordion {
+    display: block;
+}
+.resp-easy-accordion .resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+    border-bottom: 1px solid #c1c1c1 !important;
+}
+
+.resp-jfit {
+    width: 100%;
+    margin: 0;
+}
+
+.resp-tab-content-active {
+    display: block;
+}
+
+h2.resp-accordion:first-child {
+    border-top: 1px solid #c1c1c1 !important;
 }
 
 .footer {
@@ -20,135 +209,38 @@
     color: #ffffff;
     text-align: center;
     font-family: 'El Messiri', sans-serif;
-    clear: none;
-}
-
-p {
-    padding: 7px 0;
-}
-
-body, html {
-    height: 100%;
-    background: #F6F6F6;
-    overflow: auto;
-}
-.text {
-    max-width: 700px;
-    margin: 0 0 30px;
-    background: #FFF;
-    border: 2px solid #7DCA86;
-    border-radius: 5px;
-    padding: 7px 15px;
-    box-sizing: border-box;
-}
-
-.tabs {
-    margin-top: 2%;
-    width: 95%;
-    margin-left: 2%;
-    padding-bottom: 70px;
-}
-.tabs__caption {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    list-style: none;
-    position: relative;
-    margin: -1px 0 0 -1px;
-    width: 19%;
-}
-
-.tabs__caption:after {
-    content: '';
-    display: table;
     clear: both;
 }
-.tabs__caption li {
-    padding: 9px 15px;
-    margin: 1px 0 0 1px;
-    background: whitesmoke;
-    color: darkblue;
-    position: relative;
-    border-bottom: solid darkblue;
-    border-width: 2px 2px 0;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
-}
 
-.tabs__caption li:before {
-    font-family: FontAwesome, serif;
-    font-size: 20px;
-    vertical-align:bottom;
-    color: #2146dd;
-    margin-right: 14px;
-    float: left;
-}
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 768px) {
+    ul.resp-tabs-list {
+        display: none;
+    }
 
-.tabs__caption li:nth-child(1):before {content:"\f108";}
-.tabs__caption li:nth-child(2):before {content:"\f067";}
-.tabs__caption li:nth-child(3):before {content:"\f068";}
-.tabs__caption li:nth-child(4):before {content:"\f058";}
-.tabs__caption li:nth-child(5):before {content:"\f057";}
-.tabs__caption li:nth-child(6):before {content:"\f007";}
-.tabs__caption li:nth-child(7):before {content:"\f0ac";}
+    h2.resp-accordion {
+        display: block;
+    }
 
+    .resp-vtabs .resp-tab-content {
+        border: 1px solid darkblue;
+    }
 
-.tabs__caption li:not(.active) {
-    cursor: pointer;
-}
-.tabs__caption li:not(.active):hover {
-    color: white;
-    background: darkblue;
-    border-color: darkblue;
-}
-.tabs__caption .active {
-    background: #FFF;
-    color: #000;
-    border-color: darkblue;
-}
-.tabs__caption .active:after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: #FFF;
-}
-.tabs__content {
-    display: none;
-    background: #FFF;
-    border: 2px solid darkblue;
-    border-radius: 0 5px 5px 5px;
-    padding: 7px 15px;
-}
-.tabs__content.active {
-    display: block;
-}
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: initial;
+        clear: none;
+    }
+    .resp-accordion-closed {
+        display:none !important;
+    }
+    .resp-vtabs .resp-tab-content:last-child {
+        border-bottom: 1px solid darkblue !important;
+    }
 
-.vertical .tabs__caption {
-    float: left;
-    display: block;
-}
-.vertical .tabs__caption li {
-    float: none;
-    border-width: 2px 0 2px 2px;
-    border-radius: 5px 0 0 5px;
-}
-.vertical .tabs__caption li:last-child:before {
-    display: none;
-}
-.vertical .tabs__caption .active:after {
-    left: auto;
-    top: 0;
-    right: -2px;
-    bottom: 0;
-    width: 2px;
-    height: auto;
-}
-.vertical .tabs__content {
-    overflow: hidden;
+    .footer {
+        position: relative;
+    }
 }
