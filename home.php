@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +19,13 @@
 <body>
     <div class="header">
         <div class="brand"> E.M.OVPN </div>
-        <div class="welcome">You are login as 'username'</div>
+        <div class="welcome">You are login as <?php echo $_SESSION['username']; ?></div>
     </div>
 
     <div id="verticalTab">
 
         <ul class="resp-tabs-list">
-            <li>show users status</li>
+            <li>home</li>
             <li>create user</li>
             <li>remove user</li>
             <li>change user state</li>
@@ -31,8 +35,8 @@
 
         <div class="resp-tabs-container">
             <div>
-                <p>Локаята принимает во внимание онтологический закон исключённого третьего, открывая новые горизонты. Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако гегельянство поразительно. Отношение к современности амбивалентно творит интеллект, изменяя привычную реальность.</p>
-                <p>Апостериори, созерцание понимает под собой позитивизм, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Закон исключённого третьего, следовательно, абстрактен. Катарсис рефлектирует трагический знак, открывая новые горизонты.</p>
+              <h2> Welcome to web-interface!</h2>
+              <a href="php/logout.php">logout</a>
             </div>
 
             <!-- секция для формы добавления пользователя -->
@@ -55,9 +59,17 @@
               </form>
             </div>
 
+            <!-- секция для удаления пользователя -->
             <div>
-                <p>Структурализм, как следует из вышесказанного, заполняет из ряда вон выходящий дуализм, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Суждение осмысляет интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире.</p>
-                <p>Сомнение, по определению, непредвзято заполняет знак, изменяя привычную реальность. Современная ситуация, следовательно, подрывает трагический смысл жизни, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гносеология категорически порождает и обеспечивает непредвиденный смысл жизни, отрицая очевидное.</p>
+                <h3>Remove user:</h3>
+                <form>
+                    <ul class="flex-outer">
+                        <li>
+                            <input type="search" placeholder="search here...">
+                            <button type="submit">search</button>
+                        </li>
+                    </ul>
+                </form>
             </div>
 
             <!-- секция для изменения состояния учетной записи enable/disable -->
@@ -75,14 +87,22 @@
                     <tr>
                         <td>evgeny</td>
                         <td>enable</td>
-                        <td><a href="#">enable</a></td>
-                        <td><a href="#">disable</a></td>
+                        <td colspan="2">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch"></label>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>sveta</td>
                         <td>disable</td>
-                        <td><a href="#">enable</a></td>
-                        <td><a href="#">disable</a></td>
+                        <td colspan="2">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch1"></label>
+                            </div>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
