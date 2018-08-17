@@ -42,18 +42,18 @@
             <!-- секция для формы добавления пользователя -->
             <div>
               <h3>Create new user:</h3>
-              <form>
+              <form method="post" action="php/create_user.php">
                   <ul class="flex-outer">
                       <li>
                           <label for="username"> Username </label>
-                          <input type="text" id="username" placeholder="please, input username">
+                          <input type="text" name="username" placeholder="please, input username" required>
                       </li>
                       <li>
                           <label for="e-mail"> E-mail: </label>
-                          <input type="email" id="e-mail" placeholder="please, input your e-mail">
+                          <input type="email" name="email" placeholder="please, input your e-mail" required>
                       </li>
                       <li>
-                          <button type="submit">Submit</button>
+                          <button type="submit" name="submit">Submit</button>
                       </li>
                   </ul>
               </form>
@@ -121,18 +121,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>evgeny</td>
-                        <td>172.28.7.5</td>
-                        <td>active</td>
-                        <td>enable</td>
-                    </tr>
-                    <tr>
-                        <td>sveta</td>
-                        <td>172.28.7.7</td>
-                        <td>non-active</td>
-                        <td>enable</td>
-                    </tr>
+                        <?php
+                            include 'php/connection.php';
+                            $query_all = mysqli_query($link, "SELECT * FROM `users`");
+                            while ($table_all = mysqli_fetch_array($query_all)) {
+                                echo "<tr>";
+                                echo "<td>".$table_all['username']."</td>";
+                                echo "<td>".$table_all['ip']."</td>";
+                                echo "<td>active</td>";
+                                echo "<td>enable</td>";
+                                echo "</tr>";
+                            }
+                            mysqli_close($link);
+                        ?>
                     </tbody>
                 </table>
             </div>
